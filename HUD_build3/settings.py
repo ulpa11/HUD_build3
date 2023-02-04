@@ -135,17 +135,18 @@ USE_TZ = True
 
 MEDIA_ROOT = '/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/static'
-STATIC_URL = '/static/'
+STATIC_URL = '/static'
+import  os
+STATIC_ROOT=os.path.join(BASE_DIR,'static/')
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.IsAuthenticated',
-#     ],
-#     'DEFAULT_AUTHENTICATION_CLASSES': [
-#         'rest_framework.authentication.TokenAuthentication',
-#     ],
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 CORS_ORIGIN_ALLOW_ALL = True
 
